@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekret</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="różowa.jpg">
+</head>
+<body>
+
+  <input  id="showButton" type="button" value="Kliknij Zaufaj" onclick="playMusic()">
+  <img id="my-image" src="różowa.jpg" style="display: none;">
+
+  <h1  id="heading" class="hidden">ZaPrAsZaM dO oDsŁuChu</h1>
+</body>
+<script>
+
+    function playMusic(){
+  var music = new Audio('hot16.mp3');
+  music.play();
+  }
+
+
+  document.getElementById('showButton').addEventListener('click', function() {
+  var heading = document.getElementById('heading');
+  heading.classList.remove('hidden');
+  });
+
+  const showImageButton = document.getElementById("showButton");
+      const myImage = document.getElementById("my-image"); 
+      showImageButton.addEventListener("click", () => { 
+         myImage.style.display = "block"; 
+      });
+
+</script>
+</html>
